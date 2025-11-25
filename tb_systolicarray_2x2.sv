@@ -13,7 +13,7 @@ reg start;
 wire done;
 reg [A_Input_Width-1:0] A_in[N];
 reg [A_Input_Width-1:0] B_in[N];
-reg [C_Output_Width-1:0] C_out[N][N];
+wire [C_Output_Width-1:0] C_out[N][N];
 
     // Instantiate DUT
     Systolic_Array dut (
@@ -60,13 +60,13 @@ reg [C_Output_Width-1:0] C_out[N][N];
         //  enable = 1;
         // @(posedge clk);
         // start = 1;
-        // @(posedge clk);
-        // start = 0;
+        @(posedge clk);
+        start = 0;
 
         // Wait enough cycles for systolic pipeline
-         #100;
+         #150;
         $display("reset= %d, start= %d, done= %d, running= %d, clkcount= %d", reset, start, done, dut.running, dut.clkcount);
-        wait (done == 1);
+        // wait (done == 1);
 
         $display("Computed Matrix C:");
         for (i = 0; i < 2; i = i + 1) begin

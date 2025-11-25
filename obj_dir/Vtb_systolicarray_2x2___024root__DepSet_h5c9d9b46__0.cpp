@@ -25,7 +25,7 @@ void Vtb_systolicarray_2x2___024root___eval_act(Vtb_systolicarray_2x2___024root*
     Vtb_systolicarray_2x2__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    if ((0xcULL & vlSelfRef.__VactTriggered.word(0U))) {
+    if ((5ULL & vlSelfRef.__VactTriggered.word(0U))) {
         Vtb_systolicarray_2x2___024root___act_comb__TOP__0(vlSelf);
         vlSelfRef.__Vm_traceActivity[3U] = 1U;
     }
@@ -198,7 +198,7 @@ void Vtb_systolicarray_2x2___024root___eval_nba(Vtb_systolicarray_2x2___024root*
         Vtb_systolicarray_2x2___024root___nba_sequent__TOP__0(vlSelf);
         vlSelfRef.__Vm_traceActivity[4U] = 1U;
     }
-    if ((0xcULL & vlSelfRef.__VnbaTriggered.word(0U))) {
+    if ((5ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
         Vtb_systolicarray_2x2___024root___nba_comb__TOP__0(vlSelf);
         vlSelfRef.__Vm_traceActivity[5U] = 1U;
     }
@@ -210,11 +210,11 @@ void Vtb_systolicarray_2x2___024root___eval_nba(Vtb_systolicarray_2x2___024root*
         Vtb_systolicarray_2x2___024root___nba_sequent__TOP__2(vlSelf);
         vlSelfRef.__Vm_traceActivity[7U] = 1U;
     }
-    if ((0xcULL & vlSelfRef.__VnbaTriggered.word(0U))) {
+    if ((5ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
         Vtb_systolicarray_2x2___024root___nba_comb__TOP__1(vlSelf);
         vlSelfRef.__Vm_traceActivity[8U] = 1U;
     }
-    if ((0xfULL & vlSelfRef.__VnbaTriggered.word(0U))) {
+    if ((7ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
         Vtb_systolicarray_2x2___024root___nba_comb__TOP__2(vlSelf);
         vlSelfRef.__Vm_traceActivity[9U] = 1U;
     }
@@ -1672,9 +1672,9 @@ void Vtb_systolicarray_2x2___024root___timing_resume(Vtb_systolicarray_2x2___024
     Vtb_systolicarray_2x2__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    if ((8ULL & vlSelfRef.__VactTriggered.word(0U))) {
-        vlSelfRef.__VtrigSched_h8c4e8a52__0.resume(
-                                                   "@( tb_systolicarray_2x2.done)");
+    if ((1ULL & vlSelfRef.__VactTriggered.word(0U))) {
+        vlSelfRef.__VtrigSched_hda165b09__0.resume(
+                                                   "@(posedge tb_systolicarray_2x2.clk)");
     }
     if ((4ULL & vlSelfRef.__VactTriggered.word(0U))) {
         vlSelfRef.__VdlySched.resume();
@@ -1686,9 +1686,9 @@ void Vtb_systolicarray_2x2___024root___timing_commit(Vtb_systolicarray_2x2___024
     Vtb_systolicarray_2x2__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    if ((! (8ULL & vlSelfRef.__VactTriggered.word(0U)))) {
-        vlSelfRef.__VtrigSched_h8c4e8a52__0.commit(
-                                                   "@( tb_systolicarray_2x2.done)");
+    if ((! (1ULL & vlSelfRef.__VactTriggered.word(0U)))) {
+        vlSelfRef.__VtrigSched_hda165b09__0.commit(
+                                                   "@(posedge tb_systolicarray_2x2.clk)");
     }
 }
 
@@ -1699,7 +1699,7 @@ bool Vtb_systolicarray_2x2___024root___eval_phase__act(Vtb_systolicarray_2x2___0
     Vtb_systolicarray_2x2__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
-    VlTriggerVec<4> __VpreTriggered;
+    VlTriggerVec<3> __VpreTriggered;
     CData/*0:0*/ __VactExecute;
     // Body
     Vtb_systolicarray_2x2___024root___eval_triggers__act(vlSelf);

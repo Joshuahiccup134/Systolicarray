@@ -14,8 +14,6 @@ VL_ATTR_COLD void Vtb_systolicarray_2x2___024root___eval_static(Vtb_systolicarra
         = vlSelfRef.tb_systolicarray_2x2__DOT__clk;
     vlSelfRef.__Vtrigprevexpr___TOP__tb_systolicarray_2x2__DOT__reset__0 
         = vlSelfRef.tb_systolicarray_2x2__DOT__reset;
-    vlSelfRef.__Vtrigprevexpr___TOP__tb_systolicarray_2x2__DOT__done__0 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__done;
 }
 
 VL_ATTR_COLD void Vtb_systolicarray_2x2___024root___eval_final(Vtb_systolicarray_2x2___024root* vlSelf) {
@@ -431,9 +429,6 @@ VL_ATTR_COLD void Vtb_systolicarray_2x2___024root___dump_triggers__act(Vtb_systo
     if ((4ULL & vlSelfRef.__VactTriggered.word(0U))) {
         VL_DBG_MSGF("         'act' region trigger index 2 is active: @([true] __VdlySched.awaitingCurrentTime())\n");
     }
-    if ((8ULL & vlSelfRef.__VactTriggered.word(0U))) {
-        VL_DBG_MSGF("         'act' region trigger index 3 is active: @( tb_systolicarray_2x2.done)\n");
-    }
 }
 #endif  // VL_DEBUG
 
@@ -454,9 +449,6 @@ VL_ATTR_COLD void Vtb_systolicarray_2x2___024root___dump_triggers__nba(Vtb_systo
     }
     if ((4ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
         VL_DBG_MSGF("         'nba' region trigger index 2 is active: @([true] __VdlySched.awaitingCurrentTime())\n");
-    }
-    if ((8ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
-        VL_DBG_MSGF("         'nba' region trigger index 3 is active: @( tb_systolicarray_2x2.done)\n");
     }
 }
 #endif  // VL_DEBUG
@@ -659,8 +651,6 @@ VL_ATTR_COLD void Vtb_systolicarray_2x2___024root___ctor_var_reset(Vtb_systolica
     vlSelf->__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v0 = 0;
     vlSelf->__Vtrigprevexpr___TOP__tb_systolicarray_2x2__DOT__clk__0 = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 10357802142072620329ull);
     vlSelf->__Vtrigprevexpr___TOP__tb_systolicarray_2x2__DOT__reset__0 = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 15576946871234133682ull);
-    vlSelf->__Vtrigprevexpr___TOP__tb_systolicarray_2x2__DOT__done__0 = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 16103691307841241700ull);
-    vlSelf->__VactDidInit = 0;
     for (int __Vi0 = 0; __Vi0 < 10; ++__Vi0) {
         vlSelf->__Vm_traceActivity[__Vi0] = 0;
     }

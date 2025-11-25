@@ -68,6 +68,7 @@ always_ff @(posedge clk or posedge reset) begin
                 end
                 A_bus[i][0] <= '0; // Clear the input column after shifting
             end
+            
 
             for (i = 0; i < N; i = i + 1) begin // Shift B input values down
                 for (j = 0; j < N; j = j + 1) begin
@@ -75,6 +76,7 @@ always_ff @(posedge clk or posedge reset) begin
                 end
                 B_bus[0][i] <= '0; // Clear the first row after shifting
             end
+            
 
             if (clkcount >= N*2) begin // Computation is complete after N*2 cycles
                 running <= 1'b0;
