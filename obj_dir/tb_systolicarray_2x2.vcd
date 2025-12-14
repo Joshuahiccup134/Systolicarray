@@ -163,7 +163,7 @@ $timescale 1ns $end
       $var wire 16 ?! A_out [15:0] $end
       $var wire 16 @! B_out [15:0] $end
       $var wire 32 A! C_out [31:0] $end
-      $var wire 32 A! Acc_out [31:0] $end
+      $var wire 32 A! Acc_reg [31:0] $end
       $var wire 32 l" Prod_Width [31:0] $end
       $var wire 32 ;" Product [31:0] $end
      $upscope $end
@@ -186,7 +186,7 @@ $timescale 1ns $end
       $var wire 16 B! A_out [15:0] $end
       $var wire 16 C! B_out [15:0] $end
       $var wire 32 D! C_out [31:0] $end
-      $var wire 32 D! Acc_out [31:0] $end
+      $var wire 32 D! Acc_reg [31:0] $end
       $var wire 32 l" Prod_Width [31:0] $end
       $var wire 32 >" Product [31:0] $end
      $upscope $end
@@ -209,7 +209,7 @@ $timescale 1ns $end
       $var wire 16 E! A_out [15:0] $end
       $var wire 16 F! B_out [15:0] $end
       $var wire 32 G! C_out [31:0] $end
-      $var wire 32 G! Acc_out [31:0] $end
+      $var wire 32 G! Acc_reg [31:0] $end
       $var wire 32 l" Prod_Width [31:0] $end
       $var wire 32 A" Product [31:0] $end
      $upscope $end
@@ -232,7 +232,7 @@ $timescale 1ns $end
       $var wire 16 H! A_out [15:0] $end
       $var wire 16 I! B_out [15:0] $end
       $var wire 32 J! C_out [31:0] $end
-      $var wire 32 J! Acc_out [31:0] $end
+      $var wire 32 J! Acc_reg [31:0] $end
       $var wire 32 l" Prod_Width [31:0] $end
       $var wire 32 D" Product [31:0] $end
      $upscope $end
@@ -257,7 +257,7 @@ $timescale 1ns $end
       $var wire 16 K! A_out [15:0] $end
       $var wire 16 L! B_out [15:0] $end
       $var wire 32 M! C_out [31:0] $end
-      $var wire 32 M! Acc_out [31:0] $end
+      $var wire 32 M! Acc_reg [31:0] $end
       $var wire 32 l" Prod_Width [31:0] $end
       $var wire 32 G" Product [31:0] $end
      $upscope $end
@@ -280,7 +280,7 @@ $timescale 1ns $end
       $var wire 16 N! A_out [15:0] $end
       $var wire 16 O! B_out [15:0] $end
       $var wire 32 P! C_out [31:0] $end
-      $var wire 32 P! Acc_out [31:0] $end
+      $var wire 32 P! Acc_reg [31:0] $end
       $var wire 32 l" Prod_Width [31:0] $end
       $var wire 32 J" Product [31:0] $end
      $upscope $end
@@ -303,7 +303,7 @@ $timescale 1ns $end
       $var wire 16 Q! A_out [15:0] $end
       $var wire 16 R! B_out [15:0] $end
       $var wire 32 S! C_out [31:0] $end
-      $var wire 32 S! Acc_out [31:0] $end
+      $var wire 32 S! Acc_reg [31:0] $end
       $var wire 32 l" Prod_Width [31:0] $end
       $var wire 32 M" Product [31:0] $end
      $upscope $end
@@ -326,7 +326,7 @@ $timescale 1ns $end
       $var wire 16 T! A_out [15:0] $end
       $var wire 16 U! B_out [15:0] $end
       $var wire 32 V! C_out [31:0] $end
-      $var wire 32 V! Acc_out [31:0] $end
+      $var wire 32 V! Acc_reg [31:0] $end
       $var wire 32 l" Prod_Width [31:0] $end
       $var wire 32 P" Product [31:0] $end
      $upscope $end
@@ -351,7 +351,7 @@ $timescale 1ns $end
       $var wire 16 W! A_out [15:0] $end
       $var wire 16 X! B_out [15:0] $end
       $var wire 32 Y! C_out [31:0] $end
-      $var wire 32 Y! Acc_out [31:0] $end
+      $var wire 32 Y! Acc_reg [31:0] $end
       $var wire 32 l" Prod_Width [31:0] $end
       $var wire 32 S" Product [31:0] $end
      $upscope $end
@@ -374,7 +374,7 @@ $timescale 1ns $end
       $var wire 16 Z! A_out [15:0] $end
       $var wire 16 [! B_out [15:0] $end
       $var wire 32 \! C_out [31:0] $end
-      $var wire 32 \! Acc_out [31:0] $end
+      $var wire 32 \! Acc_reg [31:0] $end
       $var wire 32 l" Prod_Width [31:0] $end
       $var wire 32 V" Product [31:0] $end
      $upscope $end
@@ -397,7 +397,7 @@ $timescale 1ns $end
       $var wire 16 ]! A_out [15:0] $end
       $var wire 16 ^! B_out [15:0] $end
       $var wire 32 _! C_out [31:0] $end
-      $var wire 32 _! Acc_out [31:0] $end
+      $var wire 32 _! Acc_reg [31:0] $end
       $var wire 32 l" Prod_Width [31:0] $end
       $var wire 32 Y" Product [31:0] $end
      $upscope $end
@@ -420,7 +420,7 @@ $timescale 1ns $end
       $var wire 16 `! A_out [15:0] $end
       $var wire 16 a! B_out [15:0] $end
       $var wire 32 b! C_out [31:0] $end
-      $var wire 32 b! Acc_out [31:0] $end
+      $var wire 32 b! Acc_reg [31:0] $end
       $var wire 32 l" Prod_Width [31:0] $end
       $var wire 32 \" Product [31:0] $end
      $upscope $end
@@ -445,7 +445,7 @@ $timescale 1ns $end
       $var wire 16 c! A_out [15:0] $end
       $var wire 16 d! B_out [15:0] $end
       $var wire 32 e! C_out [31:0] $end
-      $var wire 32 e! Acc_out [31:0] $end
+      $var wire 32 e! Acc_reg [31:0] $end
       $var wire 32 l" Prod_Width [31:0] $end
       $var wire 32 _" Product [31:0] $end
      $upscope $end
@@ -468,7 +468,7 @@ $timescale 1ns $end
       $var wire 16 f! A_out [15:0] $end
       $var wire 16 g! B_out [15:0] $end
       $var wire 32 h! C_out [31:0] $end
-      $var wire 32 h! Acc_out [31:0] $end
+      $var wire 32 h! Acc_reg [31:0] $end
       $var wire 32 l" Prod_Width [31:0] $end
       $var wire 32 b" Product [31:0] $end
      $upscope $end
@@ -491,7 +491,7 @@ $timescale 1ns $end
       $var wire 16 i! A_out [15:0] $end
       $var wire 16 j! B_out [15:0] $end
       $var wire 32 k! C_out [31:0] $end
-      $var wire 32 k! Acc_out [31:0] $end
+      $var wire 32 k! Acc_reg [31:0] $end
       $var wire 32 l" Prod_Width [31:0] $end
       $var wire 32 e" Product [31:0] $end
      $upscope $end
@@ -514,7 +514,7 @@ $timescale 1ns $end
       $var wire 16 l! A_out [15:0] $end
       $var wire 16 m! B_out [15:0] $end
       $var wire 32 n! C_out [31:0] $end
-      $var wire 32 n! Acc_out [31:0] $end
+      $var wire 32 n! Acc_reg [31:0] $end
       $var wire 32 l" Prod_Width [31:0] $end
       $var wire 32 h" Product [31:0] $end
      $upscope $end
@@ -1119,6 +1119,26 @@ b1000 =!
 #100
 0i"
 #105
+b1001 =!
+1i"
+#110
+0i"
+#115
+b1010 =!
+1i"
+#120
+0i"
+#125
+b1011 =!
+1i"
+#130
+0i"
+#135
+b1100 =!
+1i"
+#140
+0i"
+#145
 1x
 b00000000000000000000000000000101 y
 b00000000000000000000000000001100 ~
@@ -1128,29 +1148,13 @@ b00000000000000000000000000000101 +!
 b00000000000000000000000000001100 0!
 b00000000000000000000000000010101 5!
 b00000000000000000000000000100000 :!
-b1001 =!
+b1101 =!
 0>!
-1i"
-#110
-0i"
-#115
-0x
-1i"
-#120
-0i"
-#125
-1i"
-#130
-0i"
-#135
-1i"
-#140
-0i"
-#145
 1i"
 #150
 0i"
 #155
+0x
 1i"
 #160
 0i"

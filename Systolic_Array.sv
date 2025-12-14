@@ -1,5 +1,5 @@
 module Systolic_Array #(
-    parameter N=4,
+    parameter N=2,
     parameter A_Input_Width =16,
     parameter C_Output_Width =32)(
     input logic clk,
@@ -78,7 +78,7 @@ always_ff @(posedge clk or posedge reset) begin
             end
             
 
-            if (clkcount >= N*2) begin // Computation is complete after N*2 cycles
+            if (clkcount >= N*2 + 4) begin // Computation is complete after N*2 cycles
                 running <= 1'b0;
                 done <= 1'b1;
             

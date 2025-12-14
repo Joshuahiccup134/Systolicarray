@@ -2,17 +2,18 @@
 
 module tb_systolicarray_2x2;
 
-localparam N = 4;
+localparam N = 2;
 localparam A_Input_Width = 16;
 localparam C_Output_Width = 32;
+localparam N_Elements = N*N;
 
 reg clk;
 reg reset;
 reg enable;
 reg start;
 wire done;
-reg [A_Input_Width-1:0] A_in[N];
-reg [A_Input_Width-1:0] B_in[N];
+logic [A_Input_Width-1:0] A_in[N];
+logic [A_Input_Width-1:0] B_in[N];
 wire [C_Output_Width-1:0] C_out[N][N];
 
     // Instantiate DUT
