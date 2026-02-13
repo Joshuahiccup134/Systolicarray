@@ -12,8 +12,10 @@ reg reset;
 reg enable;
 reg start;
 wire done;
-logic [A_Input_Width-1:0] A_in[N];
-logic [A_Input_Width-1:0] B_in[N];
+// logic [N_Elements-1:0][A_Input_Width-1:0] A_in;  
+logic [A_Input_Width-1:0] A_in [N][N];
+// logic [N_Elements-1:0][A_Input_Width-1:0] B_in;  
+logic [A_Input_Width-1:0] B_in [N][N];
 wire [C_Output_Width-1:0] C_out[N][N];
 
     // Instantiate DUT
@@ -48,26 +50,34 @@ wire [C_Output_Width-1:0] C_out[N][N];
         // Example matrices:
         // A = [1 2; 3 4]
         // B = [5 6; 7 8]
-        A_in[0] = 1; A_in[1] = 2;
-        A_in[2] = 3; A_in[3] = 4;
-        
-        B_in[0] = 5; B_in[1] = 6;
-        B_in[2] = 7; B_in[3] = 8;
-
+        A_in[0][0] = 'd1; A_in[0][1] = 'd2;
+        A_in[1][0] = 'd3; A_in[1][1] = 'd4;
+        // A_in[0] = 'd1; A_in[1] = 'd2;
+        // A_in[2] = 'd3; A_in[3] = 'd4;
+        // B_in = '{
+        // '{16'd5, 16'd6},     // row 0
+        // '{16'd7, 16'd8}      // row 1
+        // };
+        B_in[0][0] = 'd5; B_in[0][1] = 'd6;      //why isn't this working??!!
+        B_in[1][0] = 'd7;                        // weird...it works after commenting above assignments
+        B_in[1][1] = 'd8;
+        // B_in[0] = 'd5; B_in[1] = 'd6;
+        // B_in[2] = 'd7; B_in[3] = 'd8;
         // Reset pulse
-        #20;
+        // #5;
         // reset = 0;
 
         //  enable = 1;
         // @(posedge clk);
         // start = 1;
+        #10;
         @(posedge clk);
         start = 0;
 
         // Wait enough cycles for systolic pipeline
-         #150;
+        //  #150;
         $display("reset= %d, start= %d, done= %d, running= %d, clkcount= %d", reset, start, done, dut.running, dut.clkcount);
-        // wait (done == 1);
+        wait (done == 1);
 
         $display("Computed Matrix C:");
         for (i = 0; i < 2; i = i + 1) begin
@@ -82,6 +92,7 @@ wire [C_Output_Width-1:0] C_out[N][N];
 
         $display("Expected:");
         $display("C = [19 22; 43 50]");
+        #10;
 
         $display("---- Test Completed ----");
         $finish;

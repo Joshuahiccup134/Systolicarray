@@ -8,12 +8,14 @@ module MAC_unit#(
     input logic reset,
     input logic enable,
     input logic signed [A_Input_Width-1:0] A_in,
+    // input logic signed [A_Input_Width-1:0] A_in[N][N],
+    // input logic signed [A_Input_Width-1:0] B_in[N][N],
     input logic signed [A_Input_Width-1:0] B_in,
-    input logic signed [C_Output_Width-1:0] C_in,
+    // input logic signed [C_Output_Width-1:0] C_in,
     output logic signed [A_Input_Width-1:0] A_out,
     output logic signed [A_Input_Width-1:0] B_out,
     output logic signed [C_Output_Width-1:0] C_out
-    );
+);
 
 logic signed [C_Output_Width-1:0] Acc_reg; //Internal reg
 
@@ -23,27 +25,27 @@ logic signed [Prod_Width-1:0] Product;
 assign Product = A_in * B_in; // Signed multiplication
 
 always_ff @(posedge clk) begin
-if (reset)
-begin
-   A_out <= 0;
-    B_out <= 0;
-    Acc_reg <= 0;
-end
+    if (reset)
+    begin
+    A_out <= 0;
+        B_out <= 0;
+        Acc_reg <= 0;
+    end
 
-else begin
-if (enable) begin
-    Acc_reg <= C_in + $signed(Product);
-    A_out <= A_in;
-    B_out <= B_in;
-end
-else begin
-    Acc_reg <= C_in; 
-    A_out <= A_in;
-    B_out <= B_in;
-end
+    else begin
+    if (enable) begin
+        Acc_reg <= Acc_reg + $signed(Product);
+        A_out <= A_in;
+        B_out <= B_in;
+    end
+    else begin
+        Acc_reg <= Acc_reg; 
+        A_out <= A_in;
+        B_out <= B_in;
+    end
 
-end
+    
+    end
 end
 assign C_out = Acc_reg;
-
 endmodule

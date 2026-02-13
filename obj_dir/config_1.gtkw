@@ -1,49 +1,112 @@
 [*]
 [*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
-[*] Mon Dec 01 17:51:02 2025
+[*] Thu Feb 05 14:03:38 2026
 [*]
-[dumpfile] "C:\Projects\SystolicArray\obj_dir\tb_systolicarray_2x2.vcd"
-[dumpfile_mtime] "Sat Nov 29 02:59:35 2025"
-[dumpfile_size] 34061
+[dumpfile] "C:\Projects\SystolicArray\obj_dir\tb_systolicarray_2x2.fst"
+[dumpfile_mtime] "Thu Feb 05 14:02:19 2026"
+[dumpfile_size] 1904
 [savefile] "C:\Projects\SystolicArray\obj_dir\config_1.gtkw"
 [timestart] 0
 [size] 1920 973
-[pos] -187 -184
-*-4.719491 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[pos] -1 -1
+*-4.419491 65 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] tb_systolicarray_2x2.
+[treeopen] tb_systolicarray_2x2.dut.
+[treeopen] tb_systolicarray_2x2.dut.row_loop[0].
+[treeopen] tb_systolicarray_2x2.dut.row_loop[0].col_loop[0].
+[treeopen] tb_systolicarray_2x2.dut.row_loop[0].col_loop[1].
 [sst_width] 280
-[signals_width] 200
+[signals_width] 289
 [sst_expanded] 1
 [sst_vpaned_height] 287
 @28
 tb_systolicarray_2x2.clk
+@24
+tb_systolicarray_2x2.dut.clkcount[2:0]
+@28
+tb_systolicarray_2x2.start
 tb_systolicarray_2x2.done
 @22
-tb_systolicarray_2x2.dut.clkcount[3:0]
 tb_systolicarray_2x2.dut.C_bus[0][0][31:0]
-tb_systolicarray_2x2.dut.C_bus[3][2][31:0]
-tb_systolicarray_2x2.dut.C_bus[3][3][31:0]
-tb_systolicarray_2x2.dut.C_bus[2][2][31:0]
-tb_systolicarray_2x2.dut.C_out[2][2][31:0]
 @28
 tb_systolicarray_2x2.dut.running
 @22
-tb_systolicarray_2x2.dut.A_in[0][15:0]
-tb_systolicarray_2x2.dut.A_in[1][15:0]
-tb_systolicarray_2x2.dut.A_in[2][15:0]
-tb_systolicarray_2x2.dut.A_in[3][15:0]
+[color] 1
 tb_systolicarray_2x2.dut.A_bus[0][0][15:0]
+[color] 1
 tb_systolicarray_2x2.dut.A_bus[1][0][15:0]
-tb_systolicarray_2x2.dut.A_bus[2][0][15:0]
-tb_systolicarray_2x2.dut.A_bus[3][0][15:0]
-tb_systolicarray_2x2.dut.B_in[0][15:0]
-tb_systolicarray_2x2.dut.B_in[1][15:0]
-tb_systolicarray_2x2.dut.B_in[2][15:0]
-tb_systolicarray_2x2.dut.B_in[3][15:0]
+[color] 5
+tb_systolicarray_2x2.dut.B_bus[0][0][15:0]
+[color] 5
+tb_systolicarray_2x2.dut.B_bus[0][1][15:0]
+[color] 1
+tb_systolicarray_2x2.dut.A_bus[0][1][15:0]
+[color] 1
+tb_systolicarray_2x2.dut.A_bus[1][1][15:0]
+[color] 5
+tb_systolicarray_2x2.dut.B_bus[1][0][15:0]
+[color] 5
+tb_systolicarray_2x2.dut.B_bus[1][1][15:0]
+tb_systolicarray_2x2.dut.i[31:0]
+tb_systolicarray_2x2.dut.j[31:0]
+tb_systolicarray_2x2.dut.C_bus[0][1][31:0]
+tb_systolicarray_2x2.dut.C_bus[1][0][31:0]
+tb_systolicarray_2x2.dut.C_bus[1][1][31:0]
+@25
+tb_systolicarray_2x2.dut.C_out[0][0][31:0]
+tb_systolicarray_2x2.dut.C_out[0][1][31:0]
+tb_systolicarray_2x2.dut.C_out[1][0][31:0]
+@c00025
+tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+@28
+(0)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(1)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(2)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(3)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(4)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(5)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(6)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(7)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(8)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(9)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(10)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(11)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(12)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(13)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(14)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(15)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(16)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(17)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(18)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(19)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(20)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(21)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(22)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(23)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(24)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(25)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(26)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(27)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(28)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(29)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(30)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+(31)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
+@1401205
+-group_end
+@22
+[color] 3
+tb_systolicarray_2x2.dut.A_bus[0][0][15:0]
+tb_systolicarray_2x2.dut.A_bus[0][1][15:0]
+tb_systolicarray_2x2.dut.A_bus[0][2][15:0]
+tb_systolicarray_2x2.dut.A_bus[1][0][15:0]
+tb_systolicarray_2x2.dut.A_bus[1][1][15:0]
+tb_systolicarray_2x2.dut.A_bus[1][2][15:0]
+[color] 3
 tb_systolicarray_2x2.dut.B_bus[0][0][15:0]
 tb_systolicarray_2x2.dut.B_bus[0][1][15:0]
-tb_systolicarray_2x2.dut.B_bus[0][2][15:0]
-@23
-tb_systolicarray_2x2.dut.B_bus[0][3][15:0]
+tb_systolicarray_2x2.dut.B_bus[1][0][15:0]
+tb_systolicarray_2x2.dut.B_bus[1][1][15:0]
+tb_systolicarray_2x2.dut.B_bus[2][0][15:0]
+tb_systolicarray_2x2.dut.B_bus[2][1][15:0]
 [pattern_trace] 1
 [pattern_trace] 0
