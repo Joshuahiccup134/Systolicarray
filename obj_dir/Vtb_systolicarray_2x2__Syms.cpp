@@ -43,7 +43,7 @@ Vtb_systolicarray_2x2__Syms::Vtb_systolicarray_2x2__Syms(VerilatedContext* conte
     , TOP{this, namep}
 {
         // Check resources
-        Verilated::stackCheck(212);
+        Verilated::stackCheck(80);
     // Configure time unit / time precision
     _vm_contextp__->timeunit(-9);
     _vm_contextp__->timeprecision(-9);

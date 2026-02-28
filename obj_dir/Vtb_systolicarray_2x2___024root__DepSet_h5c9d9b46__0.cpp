@@ -36,14 +36,6 @@ VL_INLINE_OPT void Vtb_systolicarray_2x2___024root___act_comb__TOP__0(Vtb_systol
     Vtb_systolicarray_2x2__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[0U][0U] 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__enable;
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[0U][1U] 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__enable;
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[1U][0U] 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__enable;
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[1U][1U] 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__enable;
     vlSelfRef.tb_systolicarray_2x2__DOT____Vcellinp__dut__A_in[0U][0U] 
         = vlSelfRef.tb_systolicarray_2x2__DOT__A_in
         [0U][0U];
@@ -109,19 +101,17 @@ VL_INLINE_OPT void Vtb_systolicarray_2x2___024root___act_comb__TOP__0(Vtb_systol
 void Vtb_systolicarray_2x2___024root___nba_sequent__TOP__0(Vtb_systolicarray_2x2___024root* vlSelf);
 void Vtb_systolicarray_2x2___024root___nba_sequent__TOP__1(Vtb_systolicarray_2x2___024root* vlSelf);
 void Vtb_systolicarray_2x2___024root___nba_comb__TOP__0(Vtb_systolicarray_2x2___024root* vlSelf);
-void Vtb_systolicarray_2x2___024root___nba_sequent__TOP__2(Vtb_systolicarray_2x2___024root* vlSelf);
-void Vtb_systolicarray_2x2___024root___nba_comb__TOP__1(Vtb_systolicarray_2x2___024root* vlSelf);
 
 void Vtb_systolicarray_2x2___024root___eval_nba(Vtb_systolicarray_2x2___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtb_systolicarray_2x2___024root___eval_nba\n"); );
     Vtb_systolicarray_2x2__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
-    if ((3ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
+    if ((1ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
         Vtb_systolicarray_2x2___024root___nba_sequent__TOP__0(vlSelf);
         vlSelfRef.__Vm_traceActivity[4U] = 1U;
     }
-    if ((1ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
+    if ((3ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
         Vtb_systolicarray_2x2___024root___nba_sequent__TOP__1(vlSelf);
         vlSelfRef.__Vm_traceActivity[5U] = 1U;
     }
@@ -129,88 +119,180 @@ void Vtb_systolicarray_2x2___024root___eval_nba(Vtb_systolicarray_2x2___024root*
         Vtb_systolicarray_2x2___024root___nba_comb__TOP__0(vlSelf);
         vlSelfRef.__Vm_traceActivity[6U] = 1U;
     }
-    if ((3ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
-        Vtb_systolicarray_2x2___024root___nba_sequent__TOP__2(vlSelf);
-        vlSelfRef.__Vm_traceActivity[7U] = 1U;
-    }
-    if ((3ULL & vlSelfRef.__VnbaTriggered.word(0U))) {
-        Vtb_systolicarray_2x2___024root___nba_comb__TOP__1(vlSelf);
-        vlSelfRef.__Vm_traceActivity[8U] = 1U;
-    }
 }
 
 VL_INLINE_OPT void Vtb_systolicarray_2x2___024root___nba_sequent__TOP__0(Vtb_systolicarray_2x2___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtb_systolicarray_2x2___024root___nba_sequent__TOP__0\n"); );
     Vtb_systolicarray_2x2__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
-    // Init
-    IData/*31:0*/ __VdlyVal__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v0;
-    __VdlyVal__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v0 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v0;
-    __VdlySet__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v0 = 0;
-    IData/*31:0*/ __VdlyVal__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v1;
-    __VdlyVal__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v1 = 0;
-    IData/*31:0*/ __VdlyVal__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v2;
-    __VdlyVal__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v2 = 0;
-    IData/*31:0*/ __VdlyVal__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v3;
-    __VdlyVal__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v3 = 0;
     // Body
-    vlSelfRef.__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v0 = 0U;
-    vlSelfRef.__Vdly__tb_systolicarray_2x2__DOT__dut__DOT__clkcount 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount;
-    vlSelfRef.__Vdly__tb_systolicarray_2x2__DOT__dut__DOT__running 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__running;
-    __VdlySet__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v0 = 0U;
     if (vlSelfRef.tb_systolicarray_2x2__DOT__reset) {
-        vlSelfRef.__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v0 = 1U;
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__j = 2U;
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__i = 2U;
-        vlSelfRef.__Vdly__tb_systolicarray_2x2__DOT__dut__DOT__clkcount = 0U;
-        vlSelfRef.__Vdly__tb_systolicarray_2x2__DOT__dut__DOT__running = 0U;
-        vlSelfRef.tb_systolicarray_2x2__DOT__done = 0U;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__A_out = 0U;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__B_out = 0U;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__A_out = 0U;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__B_out = 0U;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__A_out = 0U;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__B_out = 0U;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__A_out = 0U;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__B_out = 0U;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__C_out = 0U;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__C_out = 0U;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__C_out = 0U;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__C_out = 0U;
     } else {
-        vlSelfRef.tb_systolicarray_2x2__DOT__done = 0U;
-        if (((IData)(vlSelfRef.tb_systolicarray_2x2__DOT__start) 
-             & (~ (IData)(vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__running)))) {
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__k = 0U;
-            vlSelfRef.__Vdly__tb_systolicarray_2x2__DOT__dut__DOT__running = 1U;
-            vlSelfRef.__Vdly__tb_systolicarray_2x2__DOT__dut__DOT__clkcount = 0U;
-        } else if (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__running) {
-            vlSelfRef.__Vdly__tb_systolicarray_2x2__DOT__dut__DOT__clkcount 
-                = (7U & ((IData)(1U) + (IData)(vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount)));
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__k 
-                = ((IData)(1U) + vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__k);
-            if ((4U <= (IData)(vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount))) {
-                vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__j = 2U;
-                vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__i = 2U;
-                vlSelfRef.__Vdly__tb_systolicarray_2x2__DOT__dut__DOT__running = 0U;
-                vlSelfRef.tb_systolicarray_2x2__DOT__done = 1U;
-                __VdlyVal__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v0 
-                    = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_bus
-                    [0U][0U];
-                __VdlySet__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v0 = 1U;
-                __VdlyVal__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v1 
-                    = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_bus
-                    [0U][1U];
-                __VdlyVal__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v2 
-                    = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_bus
-                    [1U][0U];
-                __VdlyVal__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v3 
-                    = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_bus
-                    [1U][1U];
-            }
+        if (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus
+            [0U][0U]) {
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__A_out 
+                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus
+                [0U][0U];
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__B_out 
+                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus
+                [0U][0U];
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__C_out 
+                = (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__C_out 
+                   + VL_MULS_III(32, VL_EXTENDS_II(32,16, 
+                                                   vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus
+                                                   [0U]
+                                                   [0U]), 
+                                 VL_EXTENDS_II(32,16, 
+                                               vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus
+                                               [0U]
+                                               [0U])));
+        } else {
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__A_out 
+                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__A_out;
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__B_out 
+                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__B_out;
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__C_out 
+                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__C_out;
+        }
+        if (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus
+            [0U][1U]) {
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__A_out 
+                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus
+                [0U][1U];
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__B_out 
+                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus
+                [0U][1U];
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__C_out 
+                = (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__C_out 
+                   + VL_MULS_III(32, VL_EXTENDS_II(32,16, 
+                                                   vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus
+                                                   [0U]
+                                                   [1U]), 
+                                 VL_EXTENDS_II(32,16, 
+                                               vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus
+                                               [0U]
+                                               [1U])));
+        } else {
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__A_out 
+                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__A_out;
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__B_out 
+                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__B_out;
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__C_out 
+                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__C_out;
+        }
+        if (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus
+            [1U][0U]) {
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__A_out 
+                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus
+                [1U][0U];
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__B_out 
+                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus
+                [1U][0U];
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__C_out 
+                = (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__C_out 
+                   + VL_MULS_III(32, VL_EXTENDS_II(32,16, 
+                                                   vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus
+                                                   [1U]
+                                                   [0U]), 
+                                 VL_EXTENDS_II(32,16, 
+                                               vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus
+                                               [1U]
+                                               [0U])));
+        } else {
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__A_out 
+                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__A_out;
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__B_out 
+                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__B_out;
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__C_out 
+                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__C_out;
+        }
+        if (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus
+            [1U][1U]) {
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__A_out 
+                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus
+                [1U][1U];
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__B_out 
+                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus
+                [1U][1U];
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__C_out 
+                = (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__C_out 
+                   + VL_MULS_III(32, VL_EXTENDS_II(32,16, 
+                                                   vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus
+                                                   [1U]
+                                                   [1U]), 
+                                 VL_EXTENDS_II(32,16, 
+                                               vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus
+                                               [1U]
+                                               [1U])));
+        } else {
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__A_out 
+                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__A_out;
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__B_out 
+                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__B_out;
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__C_out 
+                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__C_out;
         }
     }
-    if (__VdlySet__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v0) {
-        vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out[0U][0U] 
-            = __VdlyVal__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v0;
-        vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out[0U][1U] 
-            = __VdlyVal__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v1;
-        vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out[1U][0U] 
-            = __VdlyVal__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v2;
-        vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out[1U][1U] 
-            = __VdlyVal__tb_systolicarray_2x2__DOT____Vcellout__dut__C_out__v3;
-    }
+    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus[0U][1U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__A_out;
+    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus[1U][0U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__B_out;
+    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus[0U][2U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__A_out;
+    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus[1U][1U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__B_out;
+    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus[1U][1U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__A_out;
+    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus[2U][0U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__B_out;
+    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus[1U][2U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__A_out;
+    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus[2U][1U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__B_out;
+    vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out[0U][0U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__C_out;
+    vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out[0U][1U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__C_out;
+    vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out[1U][0U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__C_out;
+    vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out[1U][1U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__C_out;
+    vlSelfRef.tb_systolicarray_2x2__DOT__C_out[0U][0U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out
+        [0U][0U];
+    vlSelfRef.tb_systolicarray_2x2__DOT__C_out[0U][1U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out
+        [0U][1U];
+    vlSelfRef.tb_systolicarray_2x2__DOT__C_out[1U][0U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out
+        [1U][0U];
+    vlSelfRef.tb_systolicarray_2x2__DOT__C_out[1U][1U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out
+        [1U][1U];
+    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_out[0U][0U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out
+        [0U][0U];
+    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_out[0U][1U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out
+        [0U][1U];
+    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_out[1U][0U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out
+        [1U][0U];
+    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_out[1U][1U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out
+        [1U][1U];
 }
 
 VL_INLINE_OPT void Vtb_systolicarray_2x2___024root___nba_sequent__TOP__1(Vtb_systolicarray_2x2___024root* vlSelf) {
@@ -218,443 +300,134 @@ VL_INLINE_OPT void Vtb_systolicarray_2x2___024root___nba_sequent__TOP__1(Vtb_sys
     Vtb_systolicarray_2x2__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Init
+    IData/*31:0*/ __Vdly__tb_systolicarray_2x2__DOT__dut__DOT__clkcount;
+    __Vdly__tb_systolicarray_2x2__DOT__dut__DOT__clkcount = 0;
+    CData/*0:0*/ __Vdly__tb_systolicarray_2x2__DOT__dut__DOT__running;
+    __Vdly__tb_systolicarray_2x2__DOT__dut__DOT__running = 0;
+    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v0;
+    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v0 = 0;
+    CData/*0:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v4;
+    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v4 = 0;
+    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v4;
+    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v4 = 0;
+    CData/*0:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v5;
+    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v5 = 0;
     SData/*15:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v0;
     __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v0 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v0;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v0 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v1;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v1 = 0;
+    CData/*0:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v6;
+    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v6 = 0;
+    CData/*0:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v7;
+    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v7 = 0;
+    SData/*15:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v1;
+    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v1 = 0;
     SData/*15:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v0;
     __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v0 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v0;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v0 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v1;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v1 = 0;
-    IData/*31:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v0;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v0 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v0;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v0 = 0;
-    SData/*15:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v2;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v2 = 0;
-    SData/*15:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v2;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v2 = 0;
-    SData/*15:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v3;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v3 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v3;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v3 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v4;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v4 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v3;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v3 = 0;
-    SData/*15:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v4;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v4 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v4;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v4 = 0;
-    IData/*31:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v1;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v1 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v1;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v1 = 0;
-    SData/*15:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v5;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v5 = 0;
-    SData/*15:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v5;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v5 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v6;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v6 = 0;
-    SData/*15:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v7;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v7 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v7;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v7 = 0;
-    SData/*15:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v6;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v6 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v6;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v6 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v7;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v7 = 0;
-    IData/*31:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v2;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v2 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v2;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v2 = 0;
-    SData/*15:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v8;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v8 = 0;
-    SData/*15:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v8;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v8 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v9;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v9 = 0;
-    SData/*15:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v10;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v10 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v10;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v10 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v9;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v9 = 0;
-    SData/*15:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v10;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v10 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v10;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v10 = 0;
-    IData/*31:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v3;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v3 = 0;
-    CData/*0:0*/ __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v3;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v3 = 0;
-    SData/*15:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v11;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v11 = 0;
-    SData/*15:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v11;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v11 = 0;
+    SData/*15:0*/ __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v1;
+    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v1 = 0;
     // Body
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v0 = 0U;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v1 = 0U;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v2 = 0U;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v3 = 0U;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v6 = 0U;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v7 = 0U;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v9 = 0U;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v10 = 0U;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v0 = 0U;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v1 = 0U;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v3 = 0U;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v4 = 0U;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v3 = 0U;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v4 = 0U;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v9 = 0U;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v10 = 0U;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v0 = 0U;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v1 = 0U;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v6 = 0U;
-    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v7 = 0U;
-    if (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus
-        [0U][0U]) {
-        __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v0 
-            = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__C_out_wire;
-        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v0 = 1U;
-    }
-    if (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus
-        [0U][1U]) {
-        __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v1 
-            = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__C_out_wire;
-        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v1 = 1U;
-    }
-    if (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus
-        [1U][0U]) {
-        __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v2 
-            = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__C_out_wire;
-        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v2 = 1U;
-    }
-    if (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus
-        [1U][1U]) {
-        __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v3 
-            = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__C_out_wire;
-        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v3 = 1U;
-    }
-    if ((1U == (IData)(vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount))) {
-        __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v6 
-            = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_in_staggered
-            [1U][0U];
-        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v6 = 1U;
-        __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v3 
-            = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellinp__dut__A_in
-            [0U][1U];
-        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v3 = 1U;
-    }
-    if (((2U == (IData)(vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount)) 
-         & vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus
-         [1U][0U])) {
-        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v7 = 1U;
-    }
-    if (((2U == (IData)(vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount)) 
-         & vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus
-         [1U][1U])) {
-        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v9 = 1U;
-        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v9 = 1U;
-    }
-    if ((2U == (IData)(vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount))) {
-        __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v10 
-            = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_in_staggered
-            [1U][1U];
-        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v10 = 1U;
-        __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v10 
-            = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellinp__dut__A_in
-            [1U][1U];
-        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v10 = 1U;
-    }
-    if (((IData)(vlSelfRef.tb_systolicarray_2x2__DOT__start) 
-         & (~ (IData)(vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__running)))) {
-        __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v0 
-            = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_in_staggered
-            [0U][0U];
-        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v0 = 1U;
-        __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v0 
-            = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellinp__dut__A_in
-            [0U][0U];
-        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v0 = 1U;
-    } else if (((IData)(vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__running) 
-                & vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus
-                [0U][0U])) {
-        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v1 = 1U;
-        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v1 = 1U;
-    }
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v2 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__A_out_wire;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v5 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__A_out_wire;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v8 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__A_out_wire;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v11 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__A_out_wire;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v2 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__B_out_wire;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v5 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__B_out_wire;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v8 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__B_out_wire;
-    __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v11 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__B_out_wire;
-    if (((IData)(vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__running) 
-         & vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus
-         [0U][1U])) {
-        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v3 = 1U;
-    }
-    if (((IData)(vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__running) 
-         & (3U > (IData)(vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount)))) {
-        __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v4 
-            = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_in_staggered
-            [0U][1U];
-        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v4 = 1U;
-        __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v7 
-            = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellinp__dut__A_in
-            [1U][0U];
-        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v7 = 1U;
-    }
-    if (((2U == (IData)(vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount)) 
-         & vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus
-         [0U][1U])) {
-        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v4 = 1U;
-    }
-    if (((IData)(vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__running) 
-         & vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus
-         [1U][0U])) {
-        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v6 = 1U;
-    }
+    __Vdly__tb_systolicarray_2x2__DOT__dut__DOT__clkcount 
+        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount;
+    __Vdly__tb_systolicarray_2x2__DOT__dut__DOT__running 
+        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__running;
+    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v0 = 0U;
+    __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v4 = 0U;
     if (vlSelfRef.tb_systolicarray_2x2__DOT__reset) {
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__DOT__Acc_reg = 0U;
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__DOT__Acc_reg = 0U;
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__DOT__Acc_reg = 0U;
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__DOT__Acc_reg = 0U;
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__A_out_wire = 0U;
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__A_out_wire = 0U;
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__A_out_wire = 0U;
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__A_out_wire = 0U;
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__B_out_wire = 0U;
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__B_out_wire = 0U;
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__B_out_wire = 0U;
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__B_out_wire = 0U;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__j = 2U;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__i = 2U;
+        __Vdly__tb_systolicarray_2x2__DOT__dut__DOT__clkcount = 0U;
+        __Vdly__tb_systolicarray_2x2__DOT__dut__DOT__running = 0U;
+        vlSelfRef.tb_systolicarray_2x2__DOT__done = 0U;
+        __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v0 = 1U;
     } else {
-        if (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus
-            [0U][0U]) {
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__DOT__Acc_reg 
-                = (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__DOT__Acc_reg 
-                   + VL_MULS_III(32, VL_EXTENDS_II(32,16, 
-                                                   vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus
-                                                   [0U]
-                                                   [0U]), 
-                                 VL_EXTENDS_II(32,16, 
-                                               vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus
-                                               [0U]
-                                               [0U])));
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__A_out_wire 
-                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus
-                [0U][0U];
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__B_out_wire 
-                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus
-                [0U][0U];
-        } else {
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__DOT__Acc_reg 
-                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__DOT__Acc_reg;
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__A_out_wire 
-                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus
-                [0U][0U];
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__B_out_wire 
-                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus
-                [0U][0U];
-        }
-        if (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus
-            [0U][1U]) {
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__DOT__Acc_reg 
-                = (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__DOT__Acc_reg 
-                   + VL_MULS_III(32, VL_EXTENDS_II(32,16, 
-                                                   vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus
-                                                   [0U]
-                                                   [1U]), 
-                                 VL_EXTENDS_II(32,16, 
-                                               vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus
-                                               [0U]
-                                               [1U])));
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__A_out_wire 
-                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus
-                [0U][1U];
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__B_out_wire 
-                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus
-                [0U][1U];
-        } else {
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__DOT__Acc_reg 
-                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__DOT__Acc_reg;
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__A_out_wire 
-                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus
-                [0U][1U];
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__B_out_wire 
-                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus
-                [0U][1U];
-        }
-        if (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus
-            [1U][0U]) {
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__DOT__Acc_reg 
-                = (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__DOT__Acc_reg 
-                   + VL_MULS_III(32, VL_EXTENDS_II(32,16, 
-                                                   vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus
-                                                   [1U]
-                                                   [0U]), 
-                                 VL_EXTENDS_II(32,16, 
-                                               vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus
-                                               [1U]
-                                               [0U])));
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__A_out_wire 
-                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus
-                [1U][0U];
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__B_out_wire 
-                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus
-                [1U][0U];
-        } else {
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__DOT__Acc_reg 
-                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__DOT__Acc_reg;
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__A_out_wire 
-                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus
-                [1U][0U];
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__B_out_wire 
-                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus
-                [1U][0U];
-        }
-        if (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus
-            [1U][1U]) {
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__DOT__Acc_reg 
-                = (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__DOT__Acc_reg 
-                   + VL_MULS_III(32, VL_EXTENDS_II(32,16, 
-                                                   vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus
-                                                   [1U]
-                                                   [1U]), 
-                                 VL_EXTENDS_II(32,16, 
-                                               vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus
-                                               [1U]
-                                               [1U])));
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__A_out_wire 
-                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus
-                [1U][1U];
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__B_out_wire 
-                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus
-                [1U][1U];
-        } else {
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__DOT__Acc_reg 
-                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__DOT__Acc_reg;
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__A_out_wire 
-                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus
-                [1U][1U];
-            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__B_out_wire 
-                = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus
-                [1U][1U];
+        vlSelfRef.tb_systolicarray_2x2__DOT__done = 0U;
+        if (((IData)(vlSelfRef.tb_systolicarray_2x2__DOT__start) 
+             & (~ (IData)(vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__running)))) {
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__k = 0U;
+            __Vdly__tb_systolicarray_2x2__DOT__dut__DOT__running = 1U;
+            __Vdly__tb_systolicarray_2x2__DOT__dut__DOT__clkcount = 0U;
+        } else if (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__running) {
+            __Vdly__tb_systolicarray_2x2__DOT__dut__DOT__clkcount 
+                = ((IData)(1U) + vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount);
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__k 
+                = ((IData)(1U) + vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__k);
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_i = 2U;
+            vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__col_j = 2U;
+            if (VL_LTES_III(32, 4U, vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount)) {
+                vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__j = 2U;
+                vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__i = 2U;
+                __Vdly__tb_systolicarray_2x2__DOT__dut__DOT__running = 0U;
+                vlSelfRef.tb_systolicarray_2x2__DOT__done = 1U;
+            }
+            __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v4 
+                = (VL_LTES_III(32, 0U, vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount) 
+                   & VL_GTS_III(32, 2U, vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount));
+            __VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v4 = 1U;
+            __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v5 
+                = (VL_LTES_III(32, 1U, vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount) 
+                   & VL_GTS_III(32, 3U, vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount));
+            if ((VL_LTES_III(32, 0U, vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount) 
+                 & VL_GTS_III(32, 2U, vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount))) {
+                __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v0 
+                    = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellinp__dut__A_in
+                    [0U][(1U & vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount)];
+                __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v0 
+                    = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_in_staggered
+                    [(1U & vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount)]
+                    [0U];
+            } else {
+                __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v0 = 0U;
+                __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v0 = 0U;
+            }
+            __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v6 
+                = (VL_LTES_III(32, 1U, vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount) 
+                   & VL_GTS_III(32, 3U, vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount));
+            __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v7 
+                = (VL_LTES_III(32, 2U, vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount) 
+                   & VL_GTS_III(32, 4U, vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount));
+            if ((VL_LTES_III(32, 1U, vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount) 
+                 & VL_GTS_III(32, 3U, vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount))) {
+                __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v1 
+                    = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellinp__dut__A_in
+                    [1U][(1U & (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount 
+                                - (IData)(1U)))];
+                __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v1 
+                    = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_in_staggered
+                    [(1U & (vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount 
+                            - (IData)(1U)))][1U];
+            } else {
+                __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v1 = 0U;
+                __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v1 = 0U;
+            }
         }
     }
-    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v0) {
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_bus[0U][0U] 
-            = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v0;
+    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount 
+        = __Vdly__tb_systolicarray_2x2__DOT__dut__DOT__clkcount;
+    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__running 
+        = __Vdly__tb_systolicarray_2x2__DOT__dut__DOT__running;
+    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v0) {
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[0U][0U] = 0U;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[0U][1U] = 0U;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[1U][0U] = 0U;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[1U][1U] = 0U;
     }
-    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v1) {
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_bus[0U][1U] 
-            = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v1;
-    }
-    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v2) {
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_bus[1U][0U] 
-            = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v2;
-    }
-    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v3) {
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_bus[1U][1U] 
-            = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__C_bus__v3;
-    }
-    vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out[0U][0U] 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__DOT__Acc_reg;
-    vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out[0U][1U] 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__DOT__Acc_reg;
-    vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out[1U][0U] 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__DOT__Acc_reg;
-    vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out[1U][1U] 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__DOT__Acc_reg;
-    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v0) {
+    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v4) {
         vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus[0U][0U] 
             = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v0;
-    }
-    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v1) {
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus[0U][0U] = 0U;
-    }
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus[0U][1U] 
-        = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v2;
-    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v3) {
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus[0U][1U] 
-            = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v3;
-    }
-    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v4) {
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus[0U][1U] = 0U;
-    }
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus[0U][2U] 
-        = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v5;
-    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v6) {
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus[1U][0U] = 0U;
-    }
-    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v7) {
         vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus[1U][0U] 
-            = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v7;
-    }
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus[1U][1U] 
-        = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v8;
-    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v9) {
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus[1U][1U] = 0U;
-    }
-    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v10) {
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus[1U][1U] 
-            = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v10;
-    }
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus[1U][2U] 
-        = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v11;
-    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v0) {
+            = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__A_bus__v1;
         vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus[0U][0U] 
             = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v0;
-    }
-    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v1) {
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus[0U][0U] = 0U;
-    }
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus[1U][0U] 
-        = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v2;
-    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v3) {
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus[0U][1U] = 0U;
-    }
-    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v4) {
         vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus[0U][1U] 
-            = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v4;
+            = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v1;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[0U][0U] 
+            = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v4;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[0U][1U] 
+            = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v5;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[1U][0U] 
+            = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v6;
+        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[1U][1U] 
+            = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v7;
     }
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus[1U][1U] 
-        = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v5;
-    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v6) {
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus[1U][0U] 
-            = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v6;
-    }
-    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v7) {
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus[1U][0U] = 0U;
-    }
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus[2U][0U] 
-        = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v8;
-    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v9) {
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus[1U][1U] = 0U;
-    }
-    if (__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v10) {
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus[1U][1U] 
-            = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v10;
-    }
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_bus[2U][1U] 
-        = __VdlyVal__tb_systolicarray_2x2__DOT__dut__DOT__B_bus__v11;
 }
 
 VL_INLINE_OPT void Vtb_systolicarray_2x2___024root___nba_comb__TOP__0(Vtb_systolicarray_2x2___024root* vlSelf) {
@@ -686,14 +459,6 @@ VL_INLINE_OPT void Vtb_systolicarray_2x2___024root___nba_comb__TOP__0(Vtb_systol
     vlSelfRef.tb_systolicarray_2x2__DOT____Vcellinp__dut__A_in[1U][1U] 
         = vlSelfRef.tb_systolicarray_2x2__DOT__A_in
         [1U][1U];
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[0U][0U] 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__enable;
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[0U][1U] 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__enable;
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[1U][0U] 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__enable;
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[1U][1U] 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__enable;
     vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__B_in[0U][0U] 
         = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellinp__dut__B_in
         [0U][0U];
@@ -729,54 +494,6 @@ VL_INLINE_OPT void Vtb_systolicarray_2x2___024root___nba_comb__TOP__0(Vtb_systol
         [1U][0U];
     vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_in[1U][1U] 
         = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellinp__dut__A_in
-        [1U][1U];
-}
-
-VL_INLINE_OPT void Vtb_systolicarray_2x2___024root___nba_sequent__TOP__2(Vtb_systolicarray_2x2___024root* vlSelf) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vtb_systolicarray_2x2___024root___nba_sequent__TOP__2\n"); );
-    Vtb_systolicarray_2x2__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    auto& vlSelfRef = std::ref(*vlSelf).get();
-    // Body
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__running 
-        = vlSelfRef.__Vdly__tb_systolicarray_2x2__DOT__dut__DOT__running;
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount 
-        = vlSelfRef.__Vdly__tb_systolicarray_2x2__DOT__dut__DOT__clkcount;
-    if (vlSelfRef.__VdlySet__tb_systolicarray_2x2__DOT__dut__DOT__enable_bus__v0) {
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[0U][0U] = 0U;
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[0U][1U] = 0U;
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[1U][0U] = 0U;
-        vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[1U][1U] = 0U;
-    }
-}
-
-VL_INLINE_OPT void Vtb_systolicarray_2x2___024root___nba_comb__TOP__1(Vtb_systolicarray_2x2___024root* vlSelf) {
-    VL_DEBUG_IF(VL_DBG_MSGF("+    Vtb_systolicarray_2x2___024root___nba_comb__TOP__1\n"); );
-    Vtb_systolicarray_2x2__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
-    auto& vlSelfRef = std::ref(*vlSelf).get();
-    // Body
-    vlSelfRef.tb_systolicarray_2x2__DOT__C_out[0U][0U] 
-        = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out
-        [0U][0U];
-    vlSelfRef.tb_systolicarray_2x2__DOT__C_out[0U][1U] 
-        = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out
-        [0U][1U];
-    vlSelfRef.tb_systolicarray_2x2__DOT__C_out[1U][0U] 
-        = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out
-        [1U][0U];
-    vlSelfRef.tb_systolicarray_2x2__DOT__C_out[1U][1U] 
-        = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out
-        [1U][1U];
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_out[0U][0U] 
-        = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out
-        [0U][0U];
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_out[0U][1U] 
-        = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out
-        [0U][1U];
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_out[1U][0U] 
-        = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out
-        [1U][0U];
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_out[1U][1U] 
-        = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out
         [1U][1U];
 }
 

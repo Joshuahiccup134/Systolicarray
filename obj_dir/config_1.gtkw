@@ -1,10 +1,10 @@
 [*]
 [*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
-[*] Thu Feb 05 14:03:38 2026
+[*] Sat Feb 28 23:03:27 2026
 [*]
 [dumpfile] "C:\Projects\SystolicArray\obj_dir\tb_systolicarray_2x2.fst"
-[dumpfile_mtime] "Thu Feb 05 14:02:19 2026"
-[dumpfile_size] 1904
+[dumpfile_mtime] "Sat Feb 28 23:02:13 2026"
+[dumpfile_size] 1857
 [savefile] "C:\Projects\SystolicArray\obj_dir\config_1.gtkw"
 [timestart] 0
 [size] 1920 973
@@ -22,9 +22,11 @@
 @28
 tb_systolicarray_2x2.clk
 @24
-tb_systolicarray_2x2.dut.clkcount[2:0]
+tb_systolicarray_2x2.dut.clkcount[31:0]
 @28
 tb_systolicarray_2x2.start
+#{tb_systolicarray_2x2.dut.enable_bus[0][0:1]} tb_systolicarray_2x2.dut.enable_bus[0][0] tb_systolicarray_2x2.dut.enable_bus[0][1]
+#{tb_systolicarray_2x2.dut.enable_bus[1][0:1]} tb_systolicarray_2x2.dut.enable_bus[1][0] tb_systolicarray_2x2.dut.enable_bus[1][1]
 tb_systolicarray_2x2.done
 @22
 tb_systolicarray_2x2.dut.C_bus[0][0][31:0]
@@ -52,11 +54,11 @@ tb_systolicarray_2x2.dut.j[31:0]
 tb_systolicarray_2x2.dut.C_bus[0][1][31:0]
 tb_systolicarray_2x2.dut.C_bus[1][0][31:0]
 tb_systolicarray_2x2.dut.C_bus[1][1][31:0]
-@25
+@24
 tb_systolicarray_2x2.dut.C_out[0][0][31:0]
 tb_systolicarray_2x2.dut.C_out[0][1][31:0]
 tb_systolicarray_2x2.dut.C_out[1][0][31:0]
-@c00025
+@c00024
 tb_systolicarray_2x2.dut.C_out[1][1][31:0]
 @28
 (0)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
@@ -91,7 +93,7 @@ tb_systolicarray_2x2.dut.C_out[1][1][31:0]
 (29)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
 (30)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
 (31)tb_systolicarray_2x2.dut.C_out[1][1][31:0]
-@1401205
+@1401200
 -group_end
 @22
 [color] 3

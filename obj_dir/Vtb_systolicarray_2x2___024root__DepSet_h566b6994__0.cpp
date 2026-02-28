@@ -29,7 +29,6 @@ VL_INLINE_OPT VlCoroutine Vtb_systolicarray_2x2___024root___eval_initial__TOP__V
                                          46);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.tb_systolicarray_2x2__DOT__start = 1U;
-    vlSelfRef.tb_systolicarray_2x2__DOT__enable = 1U;
     vlSelfRef.tb_systolicarray_2x2__DOT__A_in[0U][0U] = 1U;
     vlSelfRef.tb_systolicarray_2x2__DOT__A_in[0U][1U] = 2U;
     vlSelfRef.tb_systolicarray_2x2__DOT__A_in[1U][0U] = 3U;
@@ -49,12 +48,12 @@ VL_INLINE_OPT VlCoroutine Vtb_systolicarray_2x2___024root___eval_initial__TOP__V
                                                          74);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.tb_systolicarray_2x2__DOT__start = 0U;
-    VL_WRITEF_NX("reset= %1#, start= %1#, done= %1#, running= %1#, clkcount= %1#\n",0,
+    VL_WRITEF_NX("reset= %1#, start= %1#, done= %1#, running= %1#, clkcount= %11d\n",0,
                  1,vlSelfRef.tb_systolicarray_2x2__DOT__reset,
                  1,(IData)(vlSelfRef.tb_systolicarray_2x2__DOT__start),
                  1,vlSelfRef.tb_systolicarray_2x2__DOT__done,
                  1,(IData)(vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__running),
-                 3,vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount);
+                 32,vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount);
     while ((1U & (~ (IData)(vlSelfRef.tb_systolicarray_2x2__DOT__done)))) {
         co_await vlSelfRef.__VtrigSched_h8c4e8a52__0.trigger(1U, 
                                                              nullptr, 
