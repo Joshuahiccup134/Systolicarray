@@ -24,9 +24,10 @@ VL_INLINE_OPT VlCoroutine Vtb_systolicarray_2x2___024root___eval_initial__TOP__V
     vlSymsp->_traceDumpOpen();
     vlSelfRef.tb_systolicarray_2x2__DOT__clk = 0U;
     vlSelfRef.tb_systolicarray_2x2__DOT__reset = 0U;
+    vlSelfRef.tb_systolicarray_2x2__DOT__preload = 1U;
     co_await vlSelfRef.__VdlySched.delay(0xaULL, nullptr, 
                                          "tb_systolicarray_2x2.sv", 
-                                         46);
+                                         47);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.tb_systolicarray_2x2__DOT__start = 1U;
     vlSelfRef.tb_systolicarray_2x2__DOT__A_in[0U][0U] = 1U;
@@ -39,15 +40,16 @@ VL_INLINE_OPT VlCoroutine Vtb_systolicarray_2x2___024root___eval_initial__TOP__V
     vlSelfRef.tb_systolicarray_2x2__DOT__B_in[1U][1U] = 8U;
     co_await vlSelfRef.__VdlySched.delay(0xaULL, nullptr, 
                                          "tb_systolicarray_2x2.sv", 
-                                         73);
+                                         74);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     co_await vlSelfRef.__VtrigSched_hda165b09__0.trigger(0U, 
                                                          nullptr, 
                                                          "@(posedge tb_systolicarray_2x2.clk)", 
                                                          "tb_systolicarray_2x2.sv", 
-                                                         74);
+                                                         75);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.tb_systolicarray_2x2__DOT__start = 0U;
+    vlSelfRef.tb_systolicarray_2x2__DOT__preload = 0U;
     VL_WRITEF_NX("reset= %1#, start= %1#, done= %1#, running= %1#, clkcount= %11d\n",0,
                  1,vlSelfRef.tb_systolicarray_2x2__DOT__reset,
                  1,(IData)(vlSelfRef.tb_systolicarray_2x2__DOT__start),
@@ -59,7 +61,7 @@ VL_INLINE_OPT VlCoroutine Vtb_systolicarray_2x2___024root___eval_initial__TOP__V
                                                              nullptr, 
                                                              "@( tb_systolicarray_2x2.done)", 
                                                              "tb_systolicarray_2x2.sv", 
-                                                             80);
+                                                             82);
         vlSelfRef.__Vm_traceActivity[2U] = 1U;
     }
     VL_WRITEF_NX("Computed Matrix C:\n",0);
@@ -83,10 +85,10 @@ VL_INLINE_OPT VlCoroutine Vtb_systolicarray_2x2___024root___eval_initial__TOP__V
     VL_WRITEF_NX("Expected:\nC = [19 22; 43 50]\n",0);
     co_await vlSelfRef.__VdlySched.delay(0xaULL, nullptr, 
                                          "tb_systolicarray_2x2.sv", 
-                                         95);
+                                         97);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     VL_WRITEF_NX("---- Test Completed ----\n",0);
-    VL_FINISH_MT("tb_systolicarray_2x2.sv", 98, "");
+    VL_FINISH_MT("tb_systolicarray_2x2.sv", 100, "");
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
 }
 
