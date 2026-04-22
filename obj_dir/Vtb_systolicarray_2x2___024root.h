@@ -53,10 +53,10 @@ class alignas(VL_CACHE_LINE_BYTES) Vtb_systolicarray_2x2___024root final : publi
         IData/*31:0*/ tb_systolicarray_2x2__DOT__i;
         IData/*31:0*/ tb_systolicarray_2x2__DOT__j;
         IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT__i;
-        IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT__j;
         IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT__row_i;
         IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT__col_j;
         IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT__clkcount;
+        IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT__collection_phase;
         IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__C_out_wire;
         IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__C_out;
         IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__C_out_wire;
@@ -65,9 +65,14 @@ class alignas(VL_CACHE_LINE_BYTES) Vtb_systolicarray_2x2___024root final : publi
         IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__C_out;
         IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__C_out_wire;
         IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__C_out;
+        IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT____Vlvbound_h19019461__0;
+        IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__DOT__Product;
         IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__DOT__Acc_reg;
+        IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__DOT__Product;
         IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__DOT__Acc_reg;
+        IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__DOT__Product;
         IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__DOT__Acc_reg;
+        IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__DOT__Product;
         IData/*31:0*/ tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__DOT__Acc_reg;
         IData/*31:0*/ __VactIterCount;
         VlUnpacked<VlUnpacked<SData/*15:0*/, 2>, 2> tb_systolicarray_2x2__DOT__A_in;
@@ -76,16 +81,18 @@ class alignas(VL_CACHE_LINE_BYTES) Vtb_systolicarray_2x2___024root final : publi
         VlUnpacked<VlUnpacked<IData/*31:0*/, 2>, 2> tb_systolicarray_2x2__DOT____Vcellout__dut__C_out;
         VlUnpacked<VlUnpacked<SData/*15:0*/, 2>, 2> tb_systolicarray_2x2__DOT____Vcellinp__dut__B_in;
         VlUnpacked<VlUnpacked<SData/*15:0*/, 2>, 2> tb_systolicarray_2x2__DOT____Vcellinp__dut__A_in;
+    };
+    struct {
         VlUnpacked<VlUnpacked<SData/*15:0*/, 2>, 2> tb_systolicarray_2x2__DOT__dut__DOT__A_in;
         VlUnpacked<VlUnpacked<SData/*15:0*/, 2>, 2> tb_systolicarray_2x2__DOT__dut__DOT__B_in;
         VlUnpacked<VlUnpacked<IData/*31:0*/, 2>, 2> tb_systolicarray_2x2__DOT__dut__DOT__C_out;
         VlUnpacked<VlUnpacked<SData/*15:0*/, 3>, 2> tb_systolicarray_2x2__DOT__dut__DOT__A_bus;
         VlUnpacked<VlUnpacked<SData/*15:0*/, 2>, 2> tb_systolicarray_2x2__DOT__dut__DOT__B_bus;
-    };
-    struct {
-        VlUnpacked<VlUnpacked<IData/*31:0*/, 2>, 2> tb_systolicarray_2x2__DOT__dut__DOT__C_bus;
+        VlUnpacked<VlUnpacked<IData/*31:0*/, 2>, 3> tb_systolicarray_2x2__DOT__dut__DOT__C_bus;
+        VlUnpacked<VlUnpacked<IData/*31:0*/, 2>, 3> tb_systolicarray_2x2__DOT__dut__DOT__C_acc;
         VlUnpacked<VlUnpacked<CData/*0:0*/, 2>, 2> tb_systolicarray_2x2__DOT__dut__DOT__enable_bus;
-        VlUnpacked<CData/*0:0*/, 7> __Vm_traceActivity;
+        VlUnpacked<IData/*31:0*/, 2> tb_systolicarray_2x2__DOT__dut__DOT__C_bottom;
+        VlUnpacked<CData/*0:0*/, 8> __Vm_traceActivity;
     };
     VlDelayScheduler __VdlySched;
     VlTriggerScheduler __VtrigSched_hda165b09__0;

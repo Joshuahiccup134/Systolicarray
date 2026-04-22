@@ -90,6 +90,12 @@ VL_ATTR_COLD void Vtb_systolicarray_2x2___024root___stl_sequent__TOP__0(Vtb_syst
     Vtb_systolicarray_2x2__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     auto& vlSelfRef = std::ref(*vlSelf).get();
     // Body
+    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_bottom[0U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_acc
+        [2U][0U];
+    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_bottom[1U] 
+        = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_acc
+        [2U][1U];
     vlSelfRef.tb_systolicarray_2x2__DOT__C_out[0U][0U] 
         = vlSelfRef.tb_systolicarray_2x2__DOT____Vcellout__dut__C_out
         [0U][0U];
@@ -122,19 +128,19 @@ VL_ATTR_COLD void Vtb_systolicarray_2x2___024root___stl_sequent__TOP__0(Vtb_syst
         = vlSelfRef.tb_systolicarray_2x2__DOT__enable;
     vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__enable_bus[1U][1U] 
         = vlSelfRef.tb_systolicarray_2x2__DOT__enable;
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_bus[0U][0U] 
+    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_bus[1U][0U] 
         = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__C_out;
     vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus[0U][1U] 
         = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__A_out;
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_bus[0U][1U] 
+    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_bus[1U][1U] 
         = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__C_out;
     vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus[0U][2U] 
         = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__A_out;
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_bus[1U][0U] 
+    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_bus[2U][0U] 
         = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__C_out;
     vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus[1U][1U] 
         = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__A_out;
-    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_bus[1U][1U] 
+    vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__C_bus[2U][1U] 
         = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__C_out;
     vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__A_bus[1U][2U] 
         = vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__A_out;
@@ -265,6 +271,7 @@ VL_ATTR_COLD void Vtb_systolicarray_2x2___024root____Vm_traceActivitySetAll(Vtb_
     vlSelfRef.__Vm_traceActivity[4U] = 1U;
     vlSelfRef.__Vm_traceActivity[5U] = 1U;
     vlSelfRef.__Vm_traceActivity[6U] = 1U;
+    vlSelfRef.__Vm_traceActivity[7U] = 1U;
 }
 
 VL_ATTR_COLD void Vtb_systolicarray_2x2___024root___ctor_var_reset(Vtb_systolicarray_2x2___024root* vlSelf) {
@@ -336,9 +343,14 @@ VL_ATTR_COLD void Vtb_systolicarray_2x2___024root___ctor_var_reset(Vtb_systolica
             vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__B_bus[__Vi0][__Vi1] = VL_SCOPED_RAND_RESET_I(16, __VscopeHash, 18278475700473630625ull);
         }
     }
-    for (int __Vi0 = 0; __Vi0 < 2; ++__Vi0) {
+    for (int __Vi0 = 0; __Vi0 < 3; ++__Vi0) {
         for (int __Vi1 = 0; __Vi1 < 2; ++__Vi1) {
             vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__C_bus[__Vi0][__Vi1] = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 7024271153301586982ull);
+        }
+    }
+    for (int __Vi0 = 0; __Vi0 < 3; ++__Vi0) {
+        for (int __Vi1 = 0; __Vi1 < 2; ++__Vi1) {
+            vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__C_acc[__Vi0][__Vi1] = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 13431480398397115406ull);
         }
     }
     for (int __Vi0 = 0; __Vi0 < 2; ++__Vi0) {
@@ -347,11 +359,14 @@ VL_ATTR_COLD void Vtb_systolicarray_2x2___024root___ctor_var_reset(Vtb_systolica
         }
     }
     vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__i = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 13530754125149165319ull);
-    vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__j = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 7239846342903587059ull);
     vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__row_i = 0;
     vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__col_j = 0;
     vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__clkcount = 0;
     vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__running = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 16085417695255367332ull);
+    for (int __Vi0 = 0; __Vi0 < 2; ++__Vi0) {
+        vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__C_bottom[__Vi0] = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 8731710439476826762ull);
+    }
+    vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__collection_phase = 0;
     vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__A_in_wire = VL_SCOPED_RAND_RESET_I(16, __VscopeHash, 15920550181442205270ull);
     vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__B_in_wire = VL_SCOPED_RAND_RESET_I(16, __VscopeHash, 18031420140266970744ull);
     vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__A_out_wire = VL_SCOPED_RAND_RESET_I(16, __VscopeHash, 13541231474411350786ull);
@@ -380,15 +395,20 @@ VL_ATTR_COLD void Vtb_systolicarray_2x2___024root___ctor_var_reset(Vtb_systolica
     vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__C_out_wire = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 510157133413288224ull);
     vlSelf->tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__C_out = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 11720261609829992293ull);
     vlSelf->tb_systolicarray_2x2__DOT__dut__DOT____Vcellout__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__A_out = VL_SCOPED_RAND_RESET_I(16, __VscopeHash, 8407181830326364277ull);
+    vlSelf->tb_systolicarray_2x2__DOT__dut__DOT____Vlvbound_h19019461__0 = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 16085082004637250408ull);
+    vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__DOT__Product = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 1927271433474643315ull);
     vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__DOT__Acc_reg = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 15096569691316607676ull);
+    vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__DOT__Product = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 15955053230654746535ull);
     vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__0__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__DOT__Acc_reg = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 5954695085853360381ull);
+    vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__DOT__Product = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 15262755474585170552ull);
     vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__0__KET____DOT__mac_inst__DOT__Acc_reg = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 11127055048797390004ull);
+    vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__DOT__Product = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 2860166935849286800ull);
     vlSelf->tb_systolicarray_2x2__DOT__dut__DOT__row_loop__BRA__1__KET____DOT__col_loop__BRA__1__KET____DOT__mac_inst__DOT__Acc_reg = VL_SCOPED_RAND_RESET_I(32, __VscopeHash, 14743340122798301459ull);
     vlSelf->__Vtrigprevexpr___TOP__tb_systolicarray_2x2__DOT__clk__0 = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 10357802142072620329ull);
     vlSelf->__Vtrigprevexpr___TOP__tb_systolicarray_2x2__DOT__reset__0 = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 15576946871234133682ull);
     vlSelf->__Vtrigprevexpr___TOP__tb_systolicarray_2x2__DOT__done__0 = VL_SCOPED_RAND_RESET_I(1, __VscopeHash, 16103691307841241700ull);
     vlSelf->__VactDidInit = 0;
-    for (int __Vi0 = 0; __Vi0 < 7; ++__Vi0) {
+    for (int __Vi0 = 0; __Vi0 < 8; ++__Vi0) {
         vlSelf->__Vm_traceActivity[__Vi0] = 0;
     }
 }

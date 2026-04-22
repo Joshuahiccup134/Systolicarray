@@ -7,14 +7,13 @@ localparam A_Input_Width = 16;
 localparam C_Output_Width = 32;
 localparam N_Elements = N*N;
 
-reg clk;
-reg reset;
-reg enable;
-reg start;
+logic clk;
+logic reset;
+logic enable;
+logic start;
+logic preload;
 wire done;
-// logic [N_Elements-1:0][A_Input_Width-1:0] A_in;  
-logic [A_Input_Width-1:0] A_in [N][N];
-// logic [N_Elements-1:0][A_Input_Width-1:0] B_in;  
+logic [A_Input_Width-1:0] A_in [N][N];  
 logic [A_Input_Width-1:0] B_in [N][N];
 wire [C_Output_Width-1:0] C_out[N][N];
 
@@ -27,6 +26,7 @@ wire [C_Output_Width-1:0] C_out[N][N];
         .B_in(B_in),
         .C_out(C_out),
         .start(start),
+        .preload(preload),
         .done(done)
 
     );
@@ -43,9 +43,10 @@ wire [C_Output_Width-1:0] C_out[N][N];
         $dumpvars(0, tb_systolicarray_2x2);
         clk = 0;
         reset = 0;
+        preload = 1;
         #10;
         start = 1;
-        enable = 1;
+        // enable = 1'b1;
 
         // Example matrices:
         // A = [1 2; 3 4]
@@ -73,6 +74,7 @@ wire [C_Output_Width-1:0] C_out[N][N];
         #10;
         @(posedge clk);
         start = 0;
+        preload = 0; // Clear preload after starting the computation
 
         // Wait enough cycles for systolic pipeline
         //  #150;

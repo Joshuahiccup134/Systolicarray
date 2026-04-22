@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.4.0 (w)1999-2022 BSI
-[*] Sat Mar 21 10:43:34 2026
+[*] Wed Apr 22 16:19:22 2026
 [*]
 [dumpfile] "C:\Projects\SystolicArray\obj_dir\tb_systolicarray_2x2.fst"
-[dumpfile_mtime] "Sat Mar 21 10:37:21 2026"
-[dumpfile_size] 1755
+[dumpfile_mtime] "Wed Apr 22 16:18:45 2026"
+[dumpfile_size] 1933
 [savefile] "C:\Projects\SystolicArray\obj_dir\config_1.gtkw"
 [timestart] 0
 [size] 1920 973
-[pos] -27 -24
-*-4.419491 65 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[pos] -1 -1
+*-4.419491 75 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] tb_systolicarray_2x2.
 [treeopen] tb_systolicarray_2x2.dut.
 [treeopen] tb_systolicarray_2x2.dut.row_loop[0].
@@ -54,21 +54,24 @@ tb_systolicarray_2x2.dut.i[31:0]
 tb_systolicarray_2x2.dut.j[31:0]
 tb_systolicarray_2x2.dut.row_loop[0].col_loop[0].mac_inst.A_in[15:0]
 tb_systolicarray_2x2.dut.row_loop[0].col_loop[0].mac_inst.B_in[15:0]
-tb_systolicarray_2x2.dut.row_loop[0].col_loop[0].mac_inst.C_in[31:0]
 @24
+[color] 7
+tb_systolicarray_2x2.dut.row_loop[0].col_loop[0].mac_inst.C_in[31:0]
 [color] 2
 tb_systolicarray_2x2.dut.C_bus[0][0][31:0]
 @22
 tb_systolicarray_2x2.dut.row_loop[0].col_loop[1].mac_inst.A_in[15:0]
 tb_systolicarray_2x2.dut.row_loop[0].col_loop[1].mac_inst.B_in[15:0]
-tb_systolicarray_2x2.dut.row_loop[0].col_loop[1].mac_inst.C_in[31:0]
 @24
+[color] 7
+tb_systolicarray_2x2.dut.row_loop[0].col_loop[1].mac_inst.C_in[31:0]
 [color] 2
 tb_systolicarray_2x2.dut.C_bus[0][1][31:0]
 @22
 tb_systolicarray_2x2.dut.row_loop[1].col_loop[0].mac_inst.A_in[15:0]
 tb_systolicarray_2x2.dut.row_loop[1].col_loop[0].mac_inst.B_in[15:0]
 @24
+[color] 7
 tb_systolicarray_2x2.dut.row_loop[1].col_loop[0].mac_inst.C_in[31:0]
 [color] 2
 tb_systolicarray_2x2.dut.C_bus[1][0][31:0]
@@ -76,9 +79,25 @@ tb_systolicarray_2x2.dut.C_bus[1][0][31:0]
 tb_systolicarray_2x2.dut.row_loop[1].col_loop[1].mac_inst.A_in[15:0]
 tb_systolicarray_2x2.dut.row_loop[1].col_loop[1].mac_inst.B_in[15:0]
 @24
+[color] 7
 tb_systolicarray_2x2.dut.row_loop[1].col_loop[1].mac_inst.C_in[31:0]
 [color] 2
 tb_systolicarray_2x2.dut.C_bus[1][1][31:0]
+tb_systolicarray_2x2.dut.C_bus[0][0][31:0]
+tb_systolicarray_2x2.dut.C_bus[0][1][31:0]
+tb_systolicarray_2x2.dut.C_bus[1][0][31:0]
+tb_systolicarray_2x2.dut.C_bus[1][1][31:0]
+tb_systolicarray_2x2.dut.C_bus[2][0][31:0]
+tb_systolicarray_2x2.dut.C_bus[2][1][31:0]
+tb_systolicarray_2x2.dut.C_acc[0][0][31:0]
+@25
+tb_systolicarray_2x2.dut.collection_phase[31:0]
+@24
+tb_systolicarray_2x2.dut.C_acc[0][1][31:0]
+tb_systolicarray_2x2.dut.C_acc[1][0][31:0]
+tb_systolicarray_2x2.dut.C_acc[1][1][31:0]
+tb_systolicarray_2x2.dut.C_acc[2][0][31:0]
+tb_systolicarray_2x2.dut.C_acc[2][1][31:0]
 tb_systolicarray_2x2.dut.C_out[0][0][31:0]
 tb_systolicarray_2x2.dut.C_out[0][1][31:0]
 tb_systolicarray_2x2.dut.C_out[1][0][31:0]
