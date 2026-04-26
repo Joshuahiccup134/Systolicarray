@@ -40,8 +40,8 @@ always_ff @(posedge clk) begin
     end
     else begin
         Acc_reg <= Acc_reg; 
-        A_out <= A_in;
-        B_out <= B_in;
+        A_out <= A_out;
+        B_out <= B_out;
     end
 
     

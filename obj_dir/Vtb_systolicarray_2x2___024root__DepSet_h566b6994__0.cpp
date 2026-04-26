@@ -29,6 +29,7 @@ VL_INLINE_OPT VlCoroutine Vtb_systolicarray_2x2___024root___eval_initial__TOP__V
                                          46);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.tb_systolicarray_2x2__DOT__start = 1U;
+    vlSelfRef.tb_systolicarray_2x2__DOT__enable = 1U;
     vlSelfRef.tb_systolicarray_2x2__DOT__A_in[0U][0U] = 1U;
     vlSelfRef.tb_systolicarray_2x2__DOT__A_in[0U][1U] = 2U;
     vlSelfRef.tb_systolicarray_2x2__DOT__A_in[1U][0U] = 3U;

@@ -7,10 +7,10 @@ localparam A_Input_Width = 16;
 localparam C_Output_Width = 32;
 localparam N_Elements = N*N;
 
-reg clk;
-reg reset;
-reg enable;
-reg start;
+logic clk;
+logic reset;
+logic enable;
+logic start;
 wire done;
 // logic [N_Elements-1:0][A_Input_Width-1:0] A_in;  
 logic [A_Input_Width-1:0] A_in [N][N];
