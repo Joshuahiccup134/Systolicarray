@@ -29,7 +29,6 @@ VL_INLINE_OPT VlCoroutine Vtb_systolicarray_2x2___024root___eval_initial__TOP__V
                                          46);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.tb_systolicarray_2x2__DOT__start = 1U;
-    vlSelfRef.tb_systolicarray_2x2__DOT__enable = 1U;
     vlSelfRef.tb_systolicarray_2x2__DOT__A_in[0U][0U] = 1U;
     vlSelfRef.tb_systolicarray_2x2__DOT__A_in[0U][1U] = 2U;
     vlSelfRef.tb_systolicarray_2x2__DOT__A_in[1U][0U] = 3U;
@@ -49,12 +48,12 @@ VL_INLINE_OPT VlCoroutine Vtb_systolicarray_2x2___024root___eval_initial__TOP__V
                                                          74);
     vlSelfRef.__Vm_traceActivity[2U] = 1U;
     vlSelfRef.tb_systolicarray_2x2__DOT__start = 0U;
-    VL_WRITEF_NX("reset= %1#, start= %1#, done= %1#, running= %1#, clkcount= %11d\n",0,
+    VL_WRITEF_NX("reset= %1#, start= %1#, done= %1#, running= %1#, clkcount= %2#\n",0,
                  1,vlSelfRef.tb_systolicarray_2x2__DOT__reset,
                  1,(IData)(vlSelfRef.tb_systolicarray_2x2__DOT__start),
                  1,vlSelfRef.tb_systolicarray_2x2__DOT__done,
                  1,(IData)(vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__running),
-                 32,vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount);
+                 4,vlSelfRef.tb_systolicarray_2x2__DOT__dut__DOT__clkcount);
     while ((1U & (~ (IData)(vlSelfRef.tb_systolicarray_2x2__DOT__done)))) {
         co_await vlSelfRef.__VtrigSched_h8c4e8a52__0.trigger(1U, 
                                                              nullptr, 
@@ -117,20 +116,16 @@ void Vtb_systolicarray_2x2___024root___eval_triggers__act(Vtb_systolicarray_2x2_
     // Body
     vlSelfRef.__VactTriggered.setBit(0U, ((IData)(vlSelfRef.tb_systolicarray_2x2__DOT__clk) 
                                           & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__tb_systolicarray_2x2__DOT__clk__0))));
-    vlSelfRef.__VactTriggered.setBit(1U, ((IData)(vlSelfRef.tb_systolicarray_2x2__DOT__reset) 
-                                          & (~ (IData)(vlSelfRef.__Vtrigprevexpr___TOP__tb_systolicarray_2x2__DOT__reset__0))));
-    vlSelfRef.__VactTriggered.setBit(2U, vlSelfRef.__VdlySched.awaitingCurrentTime());
-    vlSelfRef.__VactTriggered.setBit(3U, ((IData)(vlSelfRef.tb_systolicarray_2x2__DOT__done) 
+    vlSelfRef.__VactTriggered.setBit(1U, vlSelfRef.__VdlySched.awaitingCurrentTime());
+    vlSelfRef.__VactTriggered.setBit(2U, ((IData)(vlSelfRef.tb_systolicarray_2x2__DOT__done) 
                                           != (IData)(vlSelfRef.__Vtrigprevexpr___TOP__tb_systolicarray_2x2__DOT__done__0)));
     vlSelfRef.__Vtrigprevexpr___TOP__tb_systolicarray_2x2__DOT__clk__0 
         = vlSelfRef.tb_systolicarray_2x2__DOT__clk;
-    vlSelfRef.__Vtrigprevexpr___TOP__tb_systolicarray_2x2__DOT__reset__0 
-        = vlSelfRef.tb_systolicarray_2x2__DOT__reset;
     vlSelfRef.__Vtrigprevexpr___TOP__tb_systolicarray_2x2__DOT__done__0 
         = vlSelfRef.tb_systolicarray_2x2__DOT__done;
     if (VL_UNLIKELY(((1U & (~ (IData)(vlSelfRef.__VactDidInit)))))) {
         vlSelfRef.__VactDidInit = 1U;
-        vlSelfRef.__VactTriggered.setBit(3U, 1U);
+        vlSelfRef.__VactTriggered.setBit(2U, 1U);
     }
 #ifdef VL_DEBUG
     if (VL_UNLIKELY(vlSymsp->_vm_contextp__->debug())) {

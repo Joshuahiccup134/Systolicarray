@@ -1,4 +1,4 @@
-`timescale 1ns/1ns
+// `timescale 1ns/1ns
 
 module tb_systolicarray_2x2;
 
@@ -9,7 +9,7 @@ localparam N_Elements = N*N;
 
 logic clk;
 logic reset;
-logic enable;
+// logic enable;
 logic start;
 wire done;
 // logic [N_Elements-1:0][A_Input_Width-1:0] A_in;  
@@ -22,7 +22,7 @@ wire [C_Output_Width-1:0] C_out[N][N];
     Systolic_Array dut (
         .clk(clk),
         .reset(reset),
-        .enable(enable),
+        // .enable(enable),
         .A_in(A_in),
         .B_in(B_in),
         .C_out(C_out),
@@ -45,7 +45,7 @@ wire [C_Output_Width-1:0] C_out[N][N];
         reset = 0;
         #10;
         start = 1;
-        enable = 1;
+        // enable = 1;
 
         // Example matrices:
         // A = [1 2; 3 4]
