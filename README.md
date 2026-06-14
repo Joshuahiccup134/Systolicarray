@@ -24,6 +24,29 @@ This project implements a **2x2 systolic array** for matrix multiplication (`C =
 - **Synthesis**: Yosys + OpenROAD
 - **Design**: 2 × 2, 16-bit Output-stationary systolic array
 
+## How to Run
+
+### Prerequisites
+- [OSS CAD Suite](https://github.com/YosysHQ/oss-cad-suite-build/releases) (includes Verilator + GTKWave)
+- Git
+
+### Quick Run
+
+```bash
+# Clone the repository
+git clone https://github.com/Joshuahiccup134/Systolicarray
+cd Systolicarray
+
+# Run simulation (build + run)
+make
+
+# Open waveform in GTKWave
+make trend
+
+# Build, run, convert vcd to fst file and open trend with config_1
+make config
+```
+
 ### Results
 
 | Metric                    | Value                  | Notes |
