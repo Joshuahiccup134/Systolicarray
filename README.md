@@ -1,10 +1,10 @@
-# Parameterizable N X N Systolic Array for Matrix Multiplication
+# Parameterizable N X N Systolic Array for General Matrix Multiplication
 
-A parameterizable N × N systolic array implementation exploring different dataflow architectures for dense General Matrix Multiplication (GEMM). Designed while studying hardware accelerators for AI.
+A parameterizable N × N systolic array implementation exploring different dataflow architectures for dense General Matrix Multiplication (GEMM). Designed while studying hardware accelerators for Artificial Intelligence (AI).
 
 ## Overview
 
-This project implements a **2x2 systolic array** for matrix multiplication (`C = A × B`) with signed 16-bit inputs and 32-bit accumulation. The design focuses on functional correctness, power efficiency through gating, and understanding dataflow trade-offs relevant to AI accelerators and neuromorphic computing.
+This project implements a **2x2 systolic array** for matrix multiplication (`C = A × B`) with signed 16-bit inputs, using partial product decomposition and 32-bit accumulation. The design focuses on functional correctness, power efficiency through gating, and understanding dataflow trade-offs relevant to AI accelerators and neuromorphic computing.
 
 ## Variants Implemented
 
@@ -58,6 +58,7 @@ make config
 | **Worst Setup Slack** | +0.34 ns              | Meets timing comfortably |
 | **Max Frequency**        | ~56.64 MHz             | Post-route (estimated) |
 | **Design Instance Count**           | 34,801 gates          | Acceptable |
+| **Design Instance Utilization**           | 60.15 %          | Good |
 
 **Power Breakdown by Group**:
 - Sequential: ~36.1%
@@ -85,5 +86,9 @@ make config
 - On-chip SRAM input buffers
 - Optimised design for possible tape-out
 - Detailed PPA (Power-Performance-Area) comparison between variants
+
+## License
+
+This project is licensed under the **Apache License 2.0** - see the [LICENSE](LICENSE) file.
 
 ---
