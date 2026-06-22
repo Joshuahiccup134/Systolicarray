@@ -1,0 +1,11 @@
+# Simulation and build outputs
+.vscode/
+obj_dir/
+*.vcd
+*.fst
+*.cpp
+*.d
+*.o
+*.h
+*.a
+*.exe

@@ -1,5 +1,3 @@
-`timescale 1ns / 1ns
-
 module MAC_unit#(
     parameter A_Input_Width = 16,   // Width of input A and weight B
     parameter C_Output_Width = 32   // Width of output C (Accumulated result)

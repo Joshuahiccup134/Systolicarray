@@ -1,5 +1,3 @@
-`timescale 1ns/1ns
-
 module tb_systolicarray_2x2;
 
 localparam N = 2;
