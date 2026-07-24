@@ -3,8 +3,6 @@ module tb_systolicarray_2x2;
 localparam N = 2;
 localparam A_Input_Width = 16;
 localparam C_Output_Width = 32;
-localparam N_Elements = N*N;
-
 logic clk;
 logic reset;
 logic enable;
@@ -19,7 +17,7 @@ wire [C_Output_Width-1:0] C_out[N][N];
     Systolic_Array dut (
         .clk(clk),
         .reset(reset),
-        .enable(enable),
+        // .enable(enable),
         .A_in(A_in),
         .B_in(B_in),
         .C_out(C_out),
@@ -49,19 +47,13 @@ wire [C_Output_Width-1:0] C_out[N][N];
         // Example matrices:
         // A = [1 2; 3 4]
         // B = [5 6; 7 8]
+
         A_in[0][0] = 'd1; A_in[0][1] = 'd2;
         A_in[1][0] = 'd3; A_in[1][1] = 'd4;
-        // A_in[0] = 'd1; A_in[1] = 'd2;
-        // A_in[2] = 'd3; A_in[3] = 'd4;
-        // B_in = '{
-        // '{16'd5, 16'd6},     // row 0
-        // '{16'd7, 16'd8}      // row 1
-        // };
-        B_in[0][0] = 'd5; B_in[0][1] = 'd6;      //why isn't this working??!!
-        B_in[1][0] = 'd7;                        // weird...it works after commenting above assignments
-        B_in[1][1] = 'd8;
-        // B_in[0] = 'd5; B_in[1] = 'd6;
-        // B_in[2] = 'd7; B_in[3] = 'd8;
+        
+        B_in[0][0] = 'd5; B_in[0][1] = 'd6;      
+        B_in[1][0] = 'd7; B_in[1][1] = 'd8;      
+        
         // Reset pulse
         // #5;
         // reset = 0;
@@ -76,12 +68,11 @@ wire [C_Output_Width-1:0] C_out[N][N];
 
         // Wait enough cycles for systolic pipeline
         //  #150;
-        $display("reset= %d, start= %d, done= %d, running= %d, clkcount= %d", reset, start, done, dut.running, dut.clkcount);
         wait (done == 1);
 
-        $display("Computed Matrix C:");
-        for (i = 0; i < 2; i = i + 1) begin
-            for (j = 0; j < 2; j = j + 1) begin
+        $display("Computed Matrix C = A X B:");
+        for (i = 0; i < N; i = i + 1) begin
+            for (j = 0; j < N; j = j + 1) begin
                 $display("C[%0d][%0d] = %0d", i, j, C_out[i][j]);
             end
         end
